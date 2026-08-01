@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+build/
+
+# Forge runtime
+run/
+
+# IDE
+.eclipse/
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+# OS
+.DS_Store

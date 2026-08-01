@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+[[mods]]
+modId="settingsbrowser"
+version="${file.jarVersion}"
+displayName="Settings Browser"
+authors="Vonix.Network"
+description='''A searchable JEI-style browser for Forge configuration settings. JEI integration is optional.'''
+[[dependencies.settingsbrowser]]
+modId="forge"
+mandatory=true
+versionRange="[40.2,41)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.settingsbrowser]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.18.2,1.19)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.settingsbrowser]]
+modId="jei"
+mandatory=false
+versionRange="[10.2,)"
+ordering="AFTER"
+side="CLIENT"
