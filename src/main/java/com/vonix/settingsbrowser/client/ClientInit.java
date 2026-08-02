@@ -18,8 +18,6 @@ public final class ClientInit {
     @SubscribeEvent public static void setup(FMLClientSetupEvent e) { e.enqueueWork(() -> net.minecraftforge.client.ClientRegistry.registerKeyBinding(OPEN)); }
     @Mod.EventBusSubscriber(modid = SettingsBrowserMod.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static final class Input {
-        @SubscribeEvent public static void input(InputEvent.KeyInputEvent e) {
-            if (OPEN.consumeClick() && Minecraft.getInstance().screen == null) Minecraft.getInstance().setScreen(new SettingsScreen());
-        }
+        @SubscribeEvent public static void input(InputEvent.KeyInputEvent e) { /* O is retained for backwards compatibility; vanilla Options now owns the search UI. */ }
     }
 }
