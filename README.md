@@ -1,6 +1,10 @@
 # Settings Browser
 
-## 1.1.0+1.18.2
+## 1.1.2+1.18.2
+
+- Restricts the search field and conflict panel to the dedicated **Key Binds** screen only.
+- The parent Controls screen is no longer modified.
+
 
 - Adds a compact, vanilla-styled search field only to the **Controls / Key Binds** screen.
 - Searches all registered mod key binds by translated name and category.

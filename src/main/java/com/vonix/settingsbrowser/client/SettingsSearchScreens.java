@@ -6,7 +6,7 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.gui.screens.controls.ControlsScreen;
+import net.minecraft.client.gui.screens.controls.KeyBindsScreen;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,7 +28,7 @@ public final class SettingsSearchScreens {
     @SubscribeEvent
     public static void init(ScreenEvent.InitScreenEvent.Post event) {
         Screen screen = event.getScreen();
-        if (!(screen instanceof ControlsScreen)) return;
+        if (!(screen instanceof KeyBindsScreen)) return;
         int width = screen.width;
         EditBox search = new EditBox(Minecraft.getInstance().font, width - 178, 4, 168, 20,
                 new TextComponent("Search key binds"));
@@ -39,7 +39,7 @@ public final class SettingsSearchScreens {
     @SubscribeEvent
     public static void draw(ScreenEvent.DrawScreenEvent.Post event) {
         Screen screen = event.getScreen();
-        if (!(screen instanceof ControlsScreen)) return;
+        if (!(screen instanceof KeyBindsScreen)) return;
         EditBox search = SEARCH_FIELDS.get(screen);
         if (search == null || search.getValue().trim().isEmpty()) return;
 
